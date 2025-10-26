@@ -1,4 +1,22 @@
 {# templates/Inscription/accueil.html.twig #}
 
-<h1><span style="color:red">Bienvenue à notre page d'accueil</span></h1>
-<h1>Your lucky number is {{ number }}</h1>
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} - Accueil{% endblock %}
+{% block titre %}{{ parent()|upper }} - Session 2025{% endblock %}
+
+{% block body %}
+    <img src="{{ asset('images/pic.jpg') }}" title="my image" alt="My image" width="150" height="150">
+    <h2><span class="text-success">Bienvenue à notre page d'accueil</span></h2>
+    <h1 id="lucky-number">Your lucky number is {{ number }}</h1>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/inc.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            initAccueilPage(); // Appelle la fonction du fichier inc.js
+        });
+    </script>
+{% endblock %}
