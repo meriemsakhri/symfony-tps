@@ -1,10 +1,58 @@
+###> symfony/framework-bundle ###
 /.env.local
-/.env.dev
-/.idea
-/.vscode
 /.env.local.php
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
 /vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/console ###
+/.phpunit.result.cache
+/bin/phpunit
+/bin/simple-phpunit
+###< symfony/console ###
+
+###> doctrine/orm ###
+**/migrations/*.php
+!**/migrations/*.php
+###< doctrine/orm ###
+
+###> symfony/maker-bundle ###
+/src/Resources/
+###< symfony/maker-bundle ###
+
+# IDE
+/.idea/
+/.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache
+ Symfony cache
+/var/cache/
+
+# Composer
+/composer.lock
+/composer.phar
+
+# Environment files (sauf .env qui peut contenir des configs de base)
+.env.test
+.env.dev
+.env.prod
+!.env
+

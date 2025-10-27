@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ parent() }} - Edit{% endblock %}
+{% block titre %}{{ parent()|upper }} Consultation du job {{ job.getType() }}{% endblock %}
+{% block body %}
+
+    <h2>Date d'expiration : {{ job.getExpiresAt() | date('d-m-Y') }}</h2>
+    {% if job.image is not null %}
+        <h3>Image :</h3>
+        <img src="{{ job.image.getUrl() }}" alt="{{ job.image.getAlt() }}" height="100">
+    {% endif %}
+{% endblock %}
