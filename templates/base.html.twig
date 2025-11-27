@@ -13,9 +13,16 @@
         {% endblock %}
     </head>
     <body>
-        <h1 class="text-center">
-            {% block titre %} Bienvenue a Polytech Job Search{% endblock %}
-        </h1>
-        {% block body %}{% endblock %}
+        <div class="container">
+            <form action="{{ path('app_logout') }}" method="post" style="float: right; margin-top: 10px;">
+                <button type="submit" class="btn btn-danger">Se déconnecter</button>
+            </form>
+            
+            <h1 class="text-center">
+                {% block titre %} Bienvenue a Polytech Job Search{% endblock %}
+            </h1>
+            
+            {% block body %}{% endblock %}
+        </div>
     </body>
 </html>
