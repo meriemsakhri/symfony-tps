@@ -5,4 +5,10 @@
 {% block body %}
     <h1>Details</h1>
     <h3>{{ user.email }}</h3>
+    <div style="margin-bottom: 20px;">
+        <a href="{{ path('home') }}" class="btn btn-default">
+            ← Accueil
+        </a>
+    </div>
+
 {% endblock %}
