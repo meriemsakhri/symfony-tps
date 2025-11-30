@@ -1,25 +1,38 @@
-# Installation
+# 🚀 SYMFONY PROJECT SETUP
 
-```bash
-# 1. Cloner le projet
+## 📦 1️⃣ Clone the Repository
 git clone https://github.com/meriemsakhri/symfony-tps.git
 cd symfony-tps
 
-# 2. Installer les dépendances
+## 📥 2️⃣ Install Dependencies
 composer install
 
-# 3. Créer la base de données
+## 🗄️ 3️⃣ Create the Database
 php bin/console doctrine:database:create
 
-# 4. CHOIX A - Méthode Simple (Recommandée pour les TPs)
+## 🛠️ 4️⃣ Set Up Database Schema
+
+## 🔹 OPTION A — Simple Method (Recommended for TPs)
 php bin/console doctrine:schema:update --force
 
-# OU CHOIX B - Méthode Migrations (Professionnelle)
+## 🔹 OPTION B — Professional Method (Migrations)
 php bin/console make:migration
+
 php bin/console doctrine:migrations:migrate
 
-# 5. Charger les données de démo
+## 5️⃣ Load Demo Data
 php bin/console doctrine:fixtures:load
 
-# 6. Lancer le serveur
+## 6️⃣ Start Symfony Server
 symfony server:start
+
+# 🧰 USEFUL COMMANDS
+
+## 🔍 Show All Routes
+php bin/console debug:router
+
+## 🧹 Clear Cache
+php bin/console cache:clear
+
+## ✅ Validate Database Schema
+php bin/console doctrine:schema:validate
